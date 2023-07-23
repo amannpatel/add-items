@@ -77,6 +77,11 @@
                 var item2 = $("#item-two").val();
                 var item3 = $("#item-three").val();
 
+                if (item1.trim() === '' || item2.trim() === '' || item3.trim() === '') {
+                    alert("Please fill in all three fields.");
+                    return;
+                }
+
                 // Call the function to save the values to the server
                 saveValues(item1, item2, item3);
             });
